@@ -28,8 +28,8 @@ set /a count=0
 	echo %extension%
 	SET output=%nameInput%!count!%extension%
     echo !output!
-  	echo ffmpeg -i %nameInput% -c copy -ss %%a !aux! -t !output!
-  	ffmpeg -i %nameInput% -c copy -ss %%a -t !aux! !output!
+  	echo ffmpeg -i %nameInput% -c copy -ss %%a -t !aux! -c:v libx264 -crf 17 -c:a aac !output!
+  	ffmpeg -i %nameInput% -c copy -ss %%a -t !aux! -c:v libx264 -crf 17 -c:a aac  !output!
 	set /a count += 1
 ))
 pause
