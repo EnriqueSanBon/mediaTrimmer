@@ -1,4 +1,4 @@
-# Foobar
+# Media Trimmer
 
 Media Trimmer is a bash script that allows you to extract fragments of a video with the specified duration for each fragment. Only Windows.
 
